@@ -38,6 +38,40 @@ Shuffle arguments 1
 - usage: ./shuffle -sh  seed iterations filename
 - usage: ./shuffle -ush seed iterations filename
 
+# Examples
+
+These are some Linux command line examples of reversing and shuffling
+
+./shuffle -rev data1.txt
+
+./shuffle -rev data1.txt.reverse
+
+./shuffle -rev data1.txt.reverse
+
+./shuffle.sh -sh data1.txt
+
+./shuffle -sh data1.txt
+
+./shuffle -ush data1.txt.shuffle
+
+./shuffle -add data1.txt
+
+./shuffle -sub data1.txt.add
+
+./shuffle -add data1.txt.shuffle.unshuffle
+
+# Output
+
+-rw-rw-r--.  1 data data        89 Jan 25 23:00 data1.txt
+drwx------. 22 data data      4096 Jan 25 23:00 ..
+-rw-rw-r--.  1 data data        89 Jan 25 23:04 data1.txt.reverse
+-rw-rw-r--.  1 data data        89 Jan 25 23:04 data1.txt.reverse.reverse
+-rw-rw-r--.  1 data data        89 Jan 25 23:05 data1.txt.shuffle
+-rw-rw-r--.  1 data data        89 Jan 25 23:05 data1.txt.shuffle.unshuffle
+-rw-rw-r--.  1 data data        89 Jan 25 23:05 data1.txt.add
+-rw-rw-r--.  1 data data        89 Jan 25 23:06 data1.txt.add.sub
+-rw-rw-r--.  1 data data        89 Jan 25 23:06 data1.txt.shuffle.unshuffle.add
+
 
 # Donations
 

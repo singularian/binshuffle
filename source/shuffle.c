@@ -198,7 +198,7 @@ dumphex_file(char *name)
         if (!buffer)
         {
                 fprintf(stderr, "Memory error!");
-                                fclose(file);
+                fclose(file);
                 return;
         }
 
