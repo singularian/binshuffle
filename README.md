@@ -17,20 +17,24 @@ These are:
 
 
 # Usage
+
+This is the file command line usage. This program is written in C and can 
+be compiled under Linux.
+
 Shuffle arguments 1
-usage: ./shuffle -rev filename
-usage: ./shuffle -hex filename
+- usage: ./shuffle -rev filename
+- usage: ./shuffle -hex filename
 
-usage: ./shuffle -sh  filename
-usage: ./shuffle -ush filename
-usage: ./shuffle -add filename
-usage: ./shuffle -sub filename
+- usage: ./shuffle -sh  filename
+- usage: ./shuffle -ush filename
+- usage: ./shuffle -add filename
+- usage: ./shuffle -sub filename
 
-usage: ./shuffle -add number filename
-usage: ./shuffle -sub number filename
+- usage: ./shuffle -add number filename
+- usage: ./shuffle -sub number filename
 
-usage: ./shuffle -sh  seed iterations filename
-usage: ./shuffle -ush seed iterations filename
+- usage: ./shuffle -sh  seed iterations filename
+- usage: ./shuffle -ush seed iterations filename
 
 
 # Donations
