@@ -2,7 +2,7 @@
 A Program to Shuffle Binary Files
 
 This program is a commandline utility for Binary file shuffling. 
-It allows the contents of a file to be reversibly reversibly shuffled and reversibly unshuffled.
+It allows the contents of a file to be reversibly shuffled and reversibly unshuffled.
 The shuffle uses a pseudo random number generator to shuffle and unshuffle the file.
 There are currently 8 file shuffle operations. It can also display the hex code of a file.
 These are:
