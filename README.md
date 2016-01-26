@@ -1,4 +1,4 @@
-# binshuffle
+# Binshuffle
 A Program to Shuffle Binary Files
 
 This program is a commandline utility for Binary file shuffling. 
