@@ -1,8 +1,10 @@
 # binshuffle
 A Program to Shuffle Binary Files
 
-This program allows the contents of a file to be reversibly shuffled and unshuffled.
-There are 7 file shuffle operations.
+This program is a commandline utility for Binary file shuffling. 
+It allows the contents of a file to be reversibly reversibly shuffled and reversibly unshuffled.
+The shuffle uses a pseudo random number generator to shuffle and unshuffle the file.
+There are currently 8 file shuffle operations. It can also display the hex code of a file.
 These are:
  
 - 1) File reverse - Reverses a file
@@ -13,7 +15,7 @@ These are:
 - 6) Byte add - Add to the file bytes a number
 - 6) Byte subtract - Subtract from file bytes a number 
 - 7) Shuffle n iterations by a seed randomly
-- 8) Shuffle n iterations by a seed randomly
+- 8) Unshuffle n iterations by a seed randomly
 
 
 # Usage
