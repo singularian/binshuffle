@@ -62,14 +62,25 @@ These are some Linux command line examples of reversing and shuffling
 
 # Output
 
+This is an example the file data1.txt with several shuffle operations including
+reverse and unreverse and shuffle and unshuffle and add and subtract.
+
 -rw-rw-r--.  1 data data        89 Jan 25 23:00 data1.txt
+
 drwx------. 22 data data      4096 Jan 25 23:00 ..
+
 -rw-rw-r--.  1 data data        89 Jan 25 23:04 data1.txt.reverse
+
 -rw-rw-r--.  1 data data        89 Jan 25 23:04 data1.txt.reverse.reverse
+
 -rw-rw-r--.  1 data data        89 Jan 25 23:05 data1.txt.shuffle
+
 -rw-rw-r--.  1 data data        89 Jan 25 23:05 data1.txt.shuffle.unshuffle
+
 -rw-rw-r--.  1 data data        89 Jan 25 23:05 data1.txt.add
+
 -rw-rw-r--.  1 data data        89 Jan 25 23:06 data1.txt.add.sub
+
 -rw-rw-r--.  1 data data        89 Jan 25 23:06 data1.txt.shuffle.unshuffle.add
 
 
