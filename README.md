@@ -65,18 +65,31 @@ These are some Linux command line examples of reversing and shuffling
 This is an example of shuffling a file (data1.txt) with 10 iterations and a seed value of 200 for the Pseudo Random Number Generator.
 
 ./shuffle -sh 200 10 data1.txt
+
 Shuffle arguments 5
+
 shuffle file size 89 
+
 shuffle file 0 
+
 shuffle file 1 
+
 shuffle file 2 
+
 shuffle file 3 
+
 shuffle file 4 
+
 shuffle file 5 
+
 shuffle file 6 
+
 shuffle file 7 
+
 shuffle file 8 
+
 shuffle file 9 
+
 filename = data1.txt.shuffle
 
 
