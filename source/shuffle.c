@@ -44,6 +44,7 @@ int main(int argc, char *argv[]) {
     if ( argc < 3 ) /* argc should be 2 for correct execution */
     {
         /* We print argv[0] assuming it is the program name */
+        printf("Binary shuffle v1.0\n" );
         printf( "usage: %s -rev filename\n", argv[0] ); // reverse file
         printf( "usage: %s -hex filename\n\n", argv[0] );
 
@@ -751,6 +752,10 @@ void write_buffer(char *name, char *buffer, unsigned long buffer_size)
   if (pFile ){
          fwrite(buffer,1,buffer_size,pFile); 
   }
+
+  free(newname);
+ 
+  
 }
 
 // write buffer
@@ -771,6 +776,8 @@ void write_unshuffle_buffer(char *name, char *buffer, unsigned long buffer_size)
   if (pFile ){
          fwrite(buffer,1,buffer_size,pFile);
   }
+
+  free(newname);
 }
 
 // write buffer
@@ -791,6 +798,8 @@ void write_shuffle_buffer(char *name, char *buffer, unsigned long buffer_size)
   if (pFile ){
          fwrite(buffer,1,buffer_size,pFile);
   }
+
+  free(newname);
 }
 
 // write buffer
@@ -811,6 +820,8 @@ void write_add_buffer(char *name, char *buffer, unsigned long buffer_size)
   if (pFile ){
          fwrite(buffer,1,buffer_size,pFile);
   }
+
+  free(newname);
 }
 
 // write buffer
@@ -831,6 +842,8 @@ void write_sub_buffer(char *name, char *buffer, unsigned long buffer_size)
   if (pFile ){
          fwrite(buffer,1,buffer_size,pFile);
   }
+   free(newname);
+
 }
 
 

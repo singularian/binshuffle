@@ -1,7 +1,8 @@
 # Binshuffle
 A Program to Shuffle Binary Files
 
-This is the first reversible binary shuffle program.
+This is the first reversible binary shuffle program. It's different
+from a conventional file scrambler since operations can be chained.
 
 This program is a commandline utility for Binary file shuffling. 
 It allows the contents of a file to be reversibly shuffled and reversibly unshuffled.
