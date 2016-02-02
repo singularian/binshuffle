@@ -57,8 +57,20 @@ unsigned long get_rand_list(int rng, unsigned long position, unsigned long size)
     case 6:
         number  = rngSet7[listnum];
         break;
-    case 8:
+    case 7:
         number  = rngSet8[listnum];
+        break;
+    case 8:
+        number  = rngSet9[listnum];
+        break;
+    case 9:
+        number  = rngSet10[listnum];
+        break;
+    case 10:
+        number  = rngSet11[listnum];
+        break;
+    case 11:
+        number  = rngSet12[listnum];
         break;
     }
 
