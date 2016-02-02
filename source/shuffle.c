@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "rng.h"
+
 // Binary Shuffle
 // By Nathan Ross
 
@@ -28,7 +30,7 @@ void write_unshuffle_buffer(char *name, char *buffer, unsigned long buffer_size)
 void write_add_buffer(char *name, char *buffer, unsigned long buffer_size);
 void write_sub_buffer(char *name, char *buffer, unsigned long buffer_size);
 
-unsigned long timeslast     = 10;
+// static unsigned long timeslast = 10;
 static unsigned long nSeed  = 100;
 static unsigned long nSeed2 = 100;
 static unsigned long sum    = 0;
@@ -54,7 +56,11 @@ int main(int argc, char *argv[]) {
         printf( "usage: %s -add filename\n", argv[0] );
         printf( "usage: %s -sub filename\n\n", argv[0] );
         printf( "usage: %s -add number filename\n", argv[0] );
-        printf( "usage: %s -sub number filename\n\n", argv[0] );
+        printf( "usage: %s -sub number filename\n", argv[0] );
+        printf( "usage: %s -addlist rng filename\n", argv[0] );
+        printf( "usage: %s -sublist rng filename\n", argv[0] );
+        printf( "usage: %s -addlist rng iterations filename\n", argv[0] );
+        printf( "usage: %s -sublist rng iterations filename\n\n", argv[0] );
         printf( "usage: %s -sh  seed iterations filename\n", argv[0] );
         printf( "usage: %s -ush seed iterations filename\n", argv[0] );
         exit(1);
@@ -100,6 +106,17 @@ int main(int argc, char *argv[]) {
         {
           subtract_file(argv[3]);
         }
+        // add and subtract list
+        if (strcmp(argv[1], "-addlist") == 0)
+        {
+          add_file_rnglist(argv[3], sum);
+        }
+
+        if (strcmp(argv[1], "-sublist") == 0)
+        {
+          subtract_file_rnglist(argv[3], sum);
+        }
+
 
     }
     if (argc == 5 ) {
@@ -109,6 +126,17 @@ int main(int argc, char *argv[]) {
         nSeed2 = seed; 
         timeslast  = iterations; 
         timeslast  = iterations; 
+   
+
+        if (strcmp(argv[1], "-addlist") == 0)  /* Process optional arguments. */
+        {
+          add_file_rnglist(argv[4], seed);
+        }
+        if (strcmp(argv[1], "-sublist") == 0)  /* Process optional arguments. */
+        {
+          subtract_file_rnglist(argv[4], seed);
+        }
+        // shuffle and unshuffle with a rng seed and n iterations
         if (strcmp(argv[1], "-sh") == 0)  /* Process optional arguments. */
         {
           shuffle_file(argv[4]);
