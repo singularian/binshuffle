@@ -1,9 +1,10 @@
 CC=gcc
-# CFLAGS=-I02.
-# CFLAGS=-02.
+CFLAGS=-Wall
+
+all: shuffle
 
 shuffle: shuffle.o 
-#	$(CC) -o shuffle shuffle.o  -I.
-	$(CC) -o shuffle shuffle.o  -O2
+	# $(CC) $(CFLAGS) -o shuffle shuffle.o rngList.o
+	$(CC) $(CFLAGS) shuffle.o -o shuffle
 clean:
-	rm -f shuffle.o shuffle *.core  
+	rm -f shuffle *.core *.o 

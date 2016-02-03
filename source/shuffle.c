@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "rngList.h"
 #include "rng.h"
 
 // Binary Shuffle
@@ -165,7 +166,7 @@ void loadfile(char *name)
 	if (!file)
 	{
 		fprintf(stderr, "Unable to open file %s\n", name);
-		return;
+		return 0;
 	}
 	
 	//Get file length
@@ -179,7 +180,7 @@ void loadfile(char *name)
 	{
 		fprintf(stderr, "Memory error!");
                                 fclose(file);
-		return;
+		return 0;
 	}
 
 	//Read file contents into buffer
@@ -214,7 +215,7 @@ dumphex_file(char *name)
         if (!file)
         {
                 fprintf(stderr, "Unable to open file %s\n", name);
-                return;
+                return 0;
         }
 
         //Get file length
@@ -228,7 +229,7 @@ dumphex_file(char *name)
         {
                 fprintf(stderr, "Memory error!");
                 fclose(file);
-                return;
+                return 0;
         }
 
         //Read file contents into buffer
@@ -281,7 +282,7 @@ int dumphex_file2(char *name,unsigned long start, unsigned long stop, unsigned l
   if (!infile)
   {
        fprintf(stderr, "Unable to open file %s\n", name);
-       return;
+       return 0;
   }
 
   if (byte_buffer == NULL)
@@ -321,7 +322,7 @@ void shuffle_file(char *name)
         if (!file)
         {
                 fprintf(stderr, "Unable to open file %s\n", name);
-                return;
+                return 0;
         }
 
         //Get file length
@@ -335,7 +336,7 @@ void shuffle_file(char *name)
         {
                 fprintf(stderr, "Memory error!");
                                 fclose(file);
-                return;
+                return 0;
         }
 
         //Read file contents into buffer
@@ -371,7 +372,7 @@ void unshuffle_file(char *name)
         if (!file)
         {
                 fprintf(stderr, "Unable to open file %s\n", name);
-                return;
+                return 0;
         }
 
         //Get file length
@@ -385,7 +386,7 @@ void unshuffle_file(char *name)
         {
                 fprintf(stderr, "Memory error!");
                                 fclose(file);
-                return;
+                return 0;
         }
 
         //Read file contents into buffer
@@ -401,7 +402,7 @@ void unshuffle_file(char *name)
         if (!unshuffle)
         {
              fprintf(stderr, "Memory error!");
-             return;
+             return 0;
         }
 
         int times = 0;
@@ -432,7 +433,7 @@ void add_file(char *name)
         if (!file)
         {
                 fprintf(stderr, "Unable to open file %s\n", name);
-                return;
+                return 0;
         }
 
         //Get file length
@@ -446,7 +447,7 @@ void add_file(char *name)
         {
                 fprintf(stderr, "Memory error!");
                                 fclose(file);
-                return;
+                return 0;
         }
 
         //Read file contents into buffer
@@ -481,7 +482,7 @@ void subtract_file(char *name)
         if (!file)
         {
                 fprintf(stderr, "Unable to open file %s\n", name);
-                return;
+                return 0;
         }
 
         //Get file length
@@ -495,7 +496,7 @@ void subtract_file(char *name)
         {
                 fprintf(stderr, "Memory error!");
                                 fclose(file);
-                return;
+                return 0;
         }
 
         //Read file contents into buffer
@@ -660,7 +661,7 @@ char* unshuffle_buffer(char *buffer, unsigned long *unshuffle, unsigned long buf
        if (c == 0) {
    //        free(unshuffle);
            // return (char *) a;
-           return;
+           return "";
        }
   }
 
@@ -870,7 +871,7 @@ void write_sub_buffer(char *name, char *buffer, unsigned long buffer_size)
   if (pFile ){
          fwrite(buffer,1,buffer_size,pFile);
   }
-   free(newname);
+  free(newname);
 
 }
 
